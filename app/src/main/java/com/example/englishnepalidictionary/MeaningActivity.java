@@ -13,12 +13,12 @@ public class MeaningActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meaning);
+        tvMeaning = findViewById(R.id.tvMeaning);
 
         Bundle bundle = getIntent().getExtras();
 
         if(bundle!=null) {
             String convert = bundle.getString("convert");
-            tvMeaning = findViewById(R.id.tvMeaning);
             tvMeaning.setText(convert);
         }
         else
